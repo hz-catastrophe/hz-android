@@ -243,6 +243,8 @@ public class FlightPlanActivity extends FragmentActivity implements OnMapReadyCa
                 ImageView iv = (ImageView) v.findViewById(R.id.imageView);
                 iv.setImageDrawable(ContextCompat.getDrawable(FlightPlanActivity.this, images.get(currentWaypointShowWindow % images.size())));
 
+                TextView tv = (TextView) v.findViewById(R.id.nameText);
+                tv.setText(users.get(currentWaypointShowWindow % users.size()).getName());
                 // Returning the view containing InfoWindow contents
                 return v;
             }
